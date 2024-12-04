@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yuji+Mai&display=swap");
+//===
+
+* {
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  transition: all 0.3s ease;
+
+  cursor: url(./img/color-spice-passive.png), default !important;
+  background-image: url(https://i.pinimg.com/originals/5f/be/16/5fbe1685b1f7d617361fdb63e0c94a7e.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  color: #efc260;
+  font-family: "Parkinsans", sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  h1 {
+    color: #f9f871;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: "Parkinsans", sans-serif;
+  }
+
+  .todoDiv {
+    width: 550px;
+    height: auto;
+
+    padding: 50px;
+
+    background-color: #402e32c2;
+
+    border: 4px dashed #a86954;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 10%;
+
+    background-image: url(./img/molgan.png);
+
+    background-size: calc(40% - 120px);
+    background-position: 10px calc(100% - 10px);
+
+    background-repeat: no-repeat;
+
+    display: flex;
+
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      font-family: "Yuji Mai", serif;
+      font-weight: 200;
+    }
+
+    .inputDiv {
+      position: relative;
+      margin-top: 30px;
+
+      input {
+        cursor: url(./img/color-spice-passive.png), default !important;
+        background-color: #aa660034;
+        width: 350px;
+        font-family: "Parkinsans", sans-serif;
+
+        color: #ffffff;
+
+        border: 3px solid #ad8a68;
+        border-radius: 30px;
+
+        padding: 20px;
+
+        margin: 20px;
+        outline: none;
+      }
+      label {
+        position: absolute;
+        top: 50%;
+        left: 50px;
+        transform: translateY(-50%);
+        transition: all 0.2s ease;
+        font-size: 16px;
+        visibility: hidden;
+        color: #888;
+      }
+
+      input:focus + label,
+      input:not(:placeholder-shown) + label {
+        padding: 2px 5px;
+        top: 20px;
+        font-size: 12px;
+        visibility: visible;
+        color: #ffc380;
+        background-color: #cc9455;
+        border-radius: 5px;
+      }
+    }
+    ul {
+      display: flex;
+
+      flex-flow: column nowrap; /* Отключаем перенос */
+      justify-content: space-between;
+      align-items: center;
+
+      width: 450px;
+      max-height: 120px;
+
+      overflow-y: auto;
+
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 350px;
+        background: #a36c4cc6;
+
+        text-align: start;
+
+        margin-bottom: 10px;
+        padding: 5px 15px;
+
+        position: relative;
+        span {
+          width: 220px;
+        }
+
+        .buttonYNdiv {
+          width: 80px;
+          .buttonsYN {
+            width: 30px;
+            height: 30px;
+
+            margin: 5px;
+
+            background-color: #412d2dbe;
+
+            border: none;
+            border-radius: 15%;
+
+            box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.2);
+            color: #ccaf92;
+          }
+        }
+      }
+    }
+    ul::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ul::-webkit-scrollbar-thumb {
+      background-color: #cc9455;
+      border-radius: 4px;
+    }
+
+    ul::-webkit-scrollbar-thumb:hover {
+      background-color: #ffc380;
+    }
+
+    .addTaskButton {
+      width: 50px;
+      height: 50px;
+
+      background-image: linear-gradient(
+        to top,
+        #754948,
+        #82504c,
+        #8f584f,
+        #9c6052,
+        #a86954
+      );
+
+      border: none;
+      border-radius: 15%;
+
+      box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.2);
+      color: #ccaf92;
+
+      cursor: url(./img/color-spice-pack-active.png), pointer !important;
+    }
+    .addTaskButton:active {
+      box-shadow: inset 5px 5px 5px 0px #402e32a5;
+      background-image: linear-gradient(
+        to top,
+        #754948,
+        #82504c,
+        #8f584f,
+        #9c6052,
+        #a86954
+      );
+      cursor: url(./img/color-spice-pack-active.png), pointer !important;
+    }
+    .cleanBTN {
+      height: 35px;
+      width: 180px;
+
+      background-image: linear-gradient(
+        to top,
+        #664430,
+        #80563a,
+        #996a43,
+        #b37e4c,
+        #cc9455
+      );
+
+      border: none;
+      border-radius: 15px;
+
+      box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.2);
+      color: #ccaf92;
+
+      cursor: url(./img/color-spice-pack-active.png), pointer !important;
+      transition: background-color 0.3s ease;
+    }
+    button {
+      cursor: url(./img/color-spice-pack-active.png), pointer !important;
+    }
+    .modal {
+      position: absolute;
+
+      display: flex;
+
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: #56423c;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+
+      input {
+        cursor: url(./img/color-spice-passive.png), default !important;
+        background-color: #aa660034;
+        width: 350px;
+        font-family: "Parkinsans", sans-serif;
+
+        color: #ffffff;
+
+        border: 3px solid #ad8a68;
+        border-radius: 30px;
+
+        padding: 20px;
+
+        margin: 20px;
+        outline: none;
+      }
+    }
+  }
+}
